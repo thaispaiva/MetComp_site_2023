@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Métodos Computacionais para Análise de Risco</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Métodos Computacionais para Análise de Risco',
+                        subtitle: '18 - Finanças: alocação de portfólios',
+                useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                        favIcon: '18-portfolios_files/logo.png',
+              },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Prof.: Thais Paiva' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <link href="libs/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+  <link href="libs/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+  <link href="libs/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+  <script src="libs/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+  <script src="libs/ioslides-13.5.1/js/prettify/prettify.js"></script>
+  <script src="libs/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+  <script src="libs/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+  <script src="libs/ioslides-13.5.1/js/hammer.js"></script>
+  <script src="libs/ioslides-13.5.1/js/slide-controller.js"></script>
+  <script src="libs/ioslides-13.5.1/js/slide-deck.js"></script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    summary {
+      display: list-item;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+/* https://github.com/ropensci/plotly/pull/524#issuecomment-468142578 */
+slide:not(.current) .plotly.html-widget{
+  display: block;
+}
+
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+            code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode { white-space: pre; position: relative; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    code.sourceCode { white-space: pre-wrap; }
+    code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+        
+    slides > slide:not(.nobackground):before {
+      font-size: 12pt;
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 60px;
+      background: url(18-portfolios_files/logo.png) no-repeat 0 50%;
+      -webkit-background-size: 30px 30px;
+      -moz-background-size: 30px 30px;
+      -o-background-size: 30px 30px;
+      background-size: 30px 30px;
+      padding-left: 40px;
+      height: 30px;
+      line-height: 1.9;
+    }
+  </style>
+
+  <link rel="stylesheet" href="my.css" type="text/css" />
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+        <aside class="gdbar"><img src="18-portfolios_files/logo.png"></aside>
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">02 de março de 2021</p>
+          </hgroup>
+  </slide>
+
+<slide class=""><hgroup><h2>Aula de Hoje</h2></hgroup><article  id="aula-de-hoje">
+
+<ul>
+<li><p>Otimização no R</p>
+
+<ul>
+<li><p>Otimização linear</p></li>
+<li><p>Otimização quadrática</p></li>
+<li><p>Otimização não-linear</p></li>
+</ul></li>
+<li><p>Bases de Dados</p></li>
+<li><p>Retornos e Valor do Portfólio</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Alocação de Portfólios</h2></hgroup><article  id="alocação-de-portfólios">
+
+<ul>
+<li><p>Markowitz (1952) foi um dos primeiros a ver a alocação de porfólios como um problema de otimização. Desde então, esse tópico tem sido bastante estudado e vários modelos foram propostos.</p></li>
+<li><p>Alocação de portfólios pode ser visto como um método para maximizar o grau de satisfação do investidor.</p></li>
+<li><p>Por exemplo, um investidor pode estar procurando um portfólio que <strong>minimize</strong> o risco representado por um estimador da covariância dos retornos diários de ações, enquanto outro investidor pode querer medir o risco como a redução da riqueza em um determinado tempo.</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Alocação de Portfólios</h2></hgroup><article  id="alocação-de-portfólios-1">
+
+<ul>
+<li><p>Primeiro, vamos ver como fazer otimização no R, o que permite que o usuário implemente sua própria rotina para outros processos.</p></li>
+<li><p>Depois, serão apresentados exemplos simples para serem entendidos, mas que podem ser estendidos para modelos mais complexos.</p></li>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Otimização no R</h2></hgroup><article  id="otimização-no-r">
+
+</article></slide><slide class=""><hgroup><h2>Otimização no R</h2></hgroup><article  id="otimização-no-r-1">
+
+<ul>
+<li><p>Vários algoritmos e pacotes existem para resolver problemas de otimização. Vamos focar em um pacote para cada tipo de problema, mas estejam cientes de que existem outras rotinas para um mesmo tipo de otimização.</p></li>
+<li><p>As rotinas de otimização não-lineares que já estão na base do R são: <code>optim()</code> e <code>nlminb()</code>, que acomodam apenas restrições simples.</p></li>
+<li><p>Outros pacotes: <code>Rglpk</code>, <code>quadprog</code>, <code>Rsolnp</code>, <code>DEoptim</code>, <code>robustbase</code>.</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Otimização linear</h2></hgroup><article  id="otimização-linear">
+
+<ul>
+<li><p>Seja \(\mathbf x \in \mathbb{R}^n\) um vetor de variáveis sujeitas a restrições dadas por equações e inequações lineares.</p></li>
+<li><p>O problema de <span class="black">
+otimização linear</span> pode ser escrito como:</p></li>
+</ul>
+
+<p>\[\mbox{minimize}_{\mathbf{x}} \quad \mathbf c&#39; \mathbf{x} \\[.2cm] \mbox{sujeito a:} \quad \mathbf{A}_{eq} \,\mathbf x = \mathbf a_{eq} \quad\mbox{ e }\\  \qquad \quad \mathbf A \, \mathbf x \geq \mathbf a \] onde \(\mathbf{A}_{eq}\) e \(\mathbf{a}_{eq}\) são a matriz e o vetor de coeficientes da restrição da igualdade, \(\mathbf{A}\) e \(\mathbf{a}\) são os coeficientes da restrição da desigualdade, e \(\mathbf{c}\) é o vetor de coeficientes da função que desejamos maximizar/minimizar.</p>
+
+</article></slide><slide class=""><hgroup><h2>Otimização linear</h2></hgroup><article  id="otimização-linear-1">
+
+<ul>
+<li>Vários pacotes possuem funções implementadas para otimização linear:</li>
+</ul>
+
+<p><a href='https://cran.r-project.org/web/views/Optimization.html' title=''>https://cran.r-project.org/web/views/Optimization.html</a></p>
+
+<ul>
+<li>Vamos usar o pacote <code>Rglpk</code> que tem funções para otimização linear e programação inteira mista.</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Otimização linear</h2></hgroup><article  id="otimização-linear-2">
+
+<pre class = 'prettyprint lang-r'>args(Rglpk_solve_LP)</pre>
+
+<pre >## function (obj, mat, dir, rhs, bounds = NULL, types = NULL, max = FALSE, 
+##     control = list(), ...) 
+## NULL</pre>
+
+<p>onde <code>obj</code> contém os coeficientes da função que queremos otimizar, <code>mat</code> é a matriz com os coeficientes das restrições, <code>dir</code> descreve as direções e tipos de desiguldades, e <code>rhs</code> é o vetor do lado direito (&ldquo;<em>right hand side</em>&rdquo;) das restrições.</p>
+
+<ul>
+<li>A função <code>LP_solver</code> que está no código da aula prepara os objetos no formato correto e executa a otimização linear de acordo com a fórmula do slide anterior.</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Otimização quadrática</h2></hgroup><article  id="otimização-quadrática">
+
+<ul>
+<li><p>Comparado à otimização linear, os problemas de <span class="black">
+otimização quadrática</span> contém um termo quadrático (\(\mathbf{x}&#39;\mathbf{Q}\,\mathbf{x}\)) na função que desejamos maximizar/minimizar.</p></li>
+<li><p>Os demais parâmetros permanecem os mesmos.</p></li>
+</ul>
+
+<p>\[\mbox{minimize}_{\mathbf{x}} \quad \mathbf c&#39; \mathbf{x} + \mathbf{x}&#39;\mathbf{Q}\,\mathbf{x} \\[.2cm] \mbox{sujeito a:} \quad \mathbf{A}_{eq} \,\mathbf x = \mathbf a_{eq} \quad\mbox{ e } \\ \qquad \quad \mathbf A \, \mathbf x \geq \mathbf a \]</p>
+
+</article></slide><slide class=""><hgroup><h2>Otimização quadrática</h2></hgroup><article  id="otimização-quadrática-1">
+
+<ul>
+<li>Vários pacotes possuem funções implementadas para otimização quadrática:</li>
+</ul>
+
+<p><a href='https://cran.r-project.org/web/views/Optimization.html' title=''>https://cran.r-project.org/web/views/Optimization.html</a></p>
+
+<ul>
+<li>Vamos usar o pacote <code>quadprog</code>.</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Otimização quadrática</h2></hgroup><article  id="otimização-quadrática-2">
+
+<ul>
+<li>A função <code>solve.QP</code> encontra soluções para problemas da forma \(\min_{\mathbf{x}} \left( -\mathbf{c}&#39;\mathbf{x} + \tfrac{1}{2}\, \mathbf{x}&#39; \mathbf{Q}\,\mathbf{x} \right)\) sujeito a \(\mathbf{A}\,\mathbf{x} \geq \mathbf{a}\)</li>
+</ul>
+
+<pre class = 'prettyprint lang-r'>args(solve.QP)</pre>
+
+<pre >## function (Dmat, dvec, Amat, bvec, meq = 0, factorized = FALSE) 
+## NULL</pre>
+
+<p>onde <code>Dmat</code> é a matriz \(\mathbf{Q}\) do termo quadrático, <code>dvec</code> é o vetor \(\mathbf{c}\) da parte linear, e <code>Amat</code> e <code>bvec</code> são a matriz \(\mathbf{A}\) e o vetor \(\mathbf{a}\) com os coeficientes das restrições.</p>
+
+<ul>
+<li>A função <code>QP_solver</code> que está no código da aula prepara os objetos no formato correto e executa a otimização quadrática de acordo com a fórmula do slide anterior.</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Otimização não-linear</h2></hgroup><article  id="otimização-não-linear">
+
+<ul>
+<li>Os problemas de <span class="black">
+otimização não-linear</span> são caracterizados por uma função <em>não-linear</em> \(f(\mathbf{x})\) que desejamos maximizar/minimizar.</li>
+</ul>
+
+<p>\[\mbox{minimize}_{\mathbf{x}} \quad f(\mathbf{x}) \\[.2cm] \mbox{sujeito a:} \quad\,\, \mathbf{A}_{eq} \,\mathbf x = \mathbf a_{eq}, \\ \qquad \qquad \quad \mathbf A \, \mathbf x \geq \mathbf a, \\ \qquad \qquad\, h_i^{eq}(\mathbf{x}) = \,0, \\ \qquad \qquad \,\,\, h_i(\mathbf{x}) \geq \,0. \]</p>
+
+<p>onde \((\mathbf{A}_{eq}, \mathbf{a}_{eq})\) e \((\mathbf{A},\mathbf{a})\) são os coeficientes das restrições lineares, e \(h_i^{eq}\) e \(h_i\) são as restrições não-lineares.</p>
+
+<ul>
+<li>A função <code>NLP_solver</code> que está no código da aula prepara os objetos e executa a otimização não-linear usando o pacote <code>Rsolnp</code>.</li>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Base de dados</h2></hgroup><article  id="base-de-dados">
+
+</article></slide><slide class=""><hgroup><h2>Base de dados</h2></hgroup><article  id="base-de-dados-1">
+
+<ul>
+<li><p>Algumas bases de dados que vamos usar nos exemplos de otimização:</p>
+
+<ul>
+<li><strong>Índices de ações européias</strong>: base <code>EuStockMarkets</code> que já vem na configuração base do R. Consiste em índices de ações européias entre 1991 e 1998, incluindo DAX alemão, SMI suíço, CAC francês e FTSE britânico.</li>
+</ul></li>
+</ul>
+
+<pre class = 'prettyprint lang-r'>data(&quot;EuStockMarkets&quot;)
+head(EuStockMarkets)</pre>
+
+<pre >##          DAX    SMI    CAC   FTSE
+## [1,] 1628.75 1678.1 1772.8 2443.6
+## [2,] 1613.63 1688.5 1750.5 2460.2
+## [3,] 1606.51 1678.6 1718.0 2448.2
+## [4,] 1621.04 1684.1 1708.1 2470.4
+## [5,] 1618.16 1686.6 1723.1 2484.7
+## [6,] 1610.61 1671.6 1714.3 2466.8</pre>
+
+</article></slide><slide class=""><hgroup><h2>Base de dados</h2></hgroup><article  id="base-de-dados-2">
+
+<ul>
+<li>Para ilustrar como obter dados de outras fontes, vamos usar também uma base de índices NASDAQ e do tesouro americano.</li>
+</ul>
+
+<ol>
+<li><p>Primeiro, vá até <a href='https://finance.yahoo.com/' title=''>https://finance.yahoo.com/</a> e procure pelo código de algum índice (por exemplo, <code>IXIC</code> que é o índice NASDAQ).</p></li>
+<li><p>Clique em <em>Historical Data</em>.</p></li>
+<li><p>Se quiser, pode selecionar um período específico (por exemplo, 1 ano), e em seguida clique em <em>Download Data</em>.</p></li>
+</ol>
+
+<p>Você terá um arquivo .csv salvo na pasta de Downloads com as cotações diárias e outras informações do índice selecionado.</p>
+
+</article></slide><slide class=""><hgroup><h2>Base de dados</h2></hgroup><article  id="base-de-dados-3">
+
+<pre class = 'prettyprint lang-r'>## Indice NASDAQ Bank
+file = &quot;../datasets/IXIC.csv&quot;
+Nas = read.csv(file, colClasses = c(&quot;Date&quot;, rep(&quot;numeric&quot;,6)))
+
+head(Nas)</pre>
+
+<pre >##         Date    Open    High     Low   Close Adj.Close     Volume
+## 1 2020-03-02 8667.14 8952.81 8543.35 8952.17   8952.17 4232760000
+## 2 2020-03-03 8965.10 9070.32 8602.89 8684.09   8684.09 4336700000
+## 3 2020-03-04 8834.10 9019.96 8757.66 9018.09   9018.09 3602870000
+## 4 2020-03-05 8790.09 8921.08 8677.39 8738.59   8738.59 3748090000
+## 5 2020-03-06 8469.02 8612.36 8375.13 8575.62   8575.62 4279850000
+## 6 2020-03-09 7957.93 8243.31 7943.16 7950.68   7950.68 4530350000</pre>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Retornos</h2></hgroup><article  id="retornos">
+
+</article></slide><slide class=""><hgroup><h2>Retornos</h2></hgroup><article  id="retornos-1">
+
+<ul>
+<li><p>A partir dos dados que baixamos, vamos definir algumas quantidades mais apropriadas para modelar com uma distribuição estatística.</p></li>
+<li><p>Por exemplo, uma das transformações mais comuns é para obter os <span class="black">
+<strong>retornos</strong></span>:</p></li>
+</ul>
+
+<p>\[ r_t = \frac{P_t - P_{t-1}}{P_{t-1}} = \frac{P_t}{P_{t-1}} - 1 \] onde \(P_t\) é o preço da ação/índice no tempo \(t\).</p>
+
+</article></slide><slide class=""><hgroup><h2>Retorno Acumulado</h2></hgroup><article  id="retorno-acumulado">
+
+<ul>
+<li>Baseado nos retornos nos tempos \(t\), podemos obter o <span class="black">
+<strong>retorno acumulado</strong></span> no período \(T\) como:</li>
+</ul>
+
+<p>\[r_T = \frac{P_T}{P_0} - 1 = \frac{P_T}{P_{T-1}}\,.\,\frac{P_{T-1}}{P_{T-2}} \dots \frac{P_1}{P_0} - 1 = \prod_{t=1}^T \frac{P_t}{P_{t-1}} - 1\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Retorno de portfólio</h2></hgroup><article  id="retorno-de-portfólio">
+
+<ul>
+<li>Considere um <strong>portfólio</strong> de investimentos no tempo \(t\). Seu valor é dado por:</li>
+</ul>
+
+<p>\[W_t = \sum_i P_{i,t} \] que corresponde à soma dos valores dos seus componentes.</p>
+
+</article></slide><slide class=""><hgroup><h2>Retorno de portfólio</h2></hgroup><article  id="retorno-de-portfólio-1">
+
+<ul>
+<li>O <span class="black">
+<strong>retorno do portfólio</strong></span> é dado por:</li>
+</ul>
+
+<p>\[R_t = \frac{W_t - W_{t-1}}{W_{t-1}} = \frac{[P_{1,t} - P_{1,t-1}]+\dots+[P_{N,t} - P_{N,t-1}]}{W_{t-1}} \\[.5cm] \,\,\qquad\quad =\frac{r_1.P_{1,t-1} + \dots + r_N.P_{N,t-1}}{W_{t-1}} \]</p>
+
+</article></slide><slide class=""><hgroup><h2>Retorno de portfólio</h2></hgroup><article  id="retorno-de-portfólio-2">
+
+<ul>
+<li>Assim, o retorno do portfólio é a soma dos valores dos seus componentes ponderados por \(w_i=\frac{P_{t-1}}{W_{t-1}}\).</li>
+</ul>
+
+<p>\[R_t = \sum_{i=1}^N \frac{P_{t-1}}{W_{t-1}}.r_i = \sum_{i=1}^N w_i .\, r_i \]</p>
+
+</article></slide><slide class=""><hgroup><h2>Retorno de portfólio</h2></hgroup><article  id="retorno-de-portfólio-3">
+
+<ul>
+<li>Calculando os retornos para os nossos dados:</li>
+</ul>
+
+<pre class = 'prettyprint lang-r'>## Retornos
+
+x &lt;- apply(EuStockMarkets, MAR=2,
+           function(x) x[-1] / x[-length(x)] - 1)</pre>
+
+</article></slide><slide class=""><hgroup><h2>Valor do portfólio</h2></hgroup><article  id="valor-do-portfólio">
+
+<ul>
+<li>Dados os retornos \(r_t\) e os pesos \(w_i\), o <span class="black">
+<strong>valor do portfólio</strong></span> no tempo \(t\) pode ser calculado como:</li>
+</ul>
+
+<p>\[W_t = W_0 \,. \prod_{i=1}^t (1 + \mathbf{r}&#39;_t \mathbf{w}) \] onde \(W_0\) é o valor inicial do portfólio.</p>
+
+</article></slide><slide class=""><hgroup><h2>Valor do portfólio</h2></hgroup><article  id="valor-do-portfólio-1">
+
+<pre class = 'prettyprint lang-r'>## Função para calcular o valor do portfólio
+pftPerf &lt;- function(x, w, W0 = 1000) {
+  W0 * cumprod(c(1, 1 + x %*% w))
+}</pre>
+
+</article></slide><slide class=""><hgroup><h2>Valor do portfólio</h2></hgroup><article  id="valor-do-portfólio-2">
+
+<p><img src="18-portfolios_files/figure-html/unnamed-chunk-16-1.png" width="720" style="display: block; margin: auto;" /></p>
+
+</article></slide><slide class=""><hgroup><h2><span class="green3">
+<strong>Exercício</strong></span></h2></hgroup><article  id="exercício">
+
+<ul>
+<li><p>Repetir o gráfico usando os dados da NASDAQ.</p></li>
+<li><p>Nesse caso, assumir um portfólio apenas com este índice (peso de 100%).</p></li>
+</ul></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
