@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EST053: Tópicos Especiais em Atuária on Métodos Computacionais para Análise de Risco 2023/1</title>
+    <link>/</link>
+    <description>Recent content in EST053: Tópicos Especiais em Atuária on Métodos Computacionais para Análise de Risco 2023/1</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cronograma</title>
+      <link>/cronograma/</link>
+      <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/cronograma/</guid>
+      <description>&lt;!DOCTYPE html&gt;O cronograma será constantemente atualizado ao longo do semestre.DataTópicoSlidesCódigoDadosListasTrabalho💻️PARTE I: Conceitos Básicos de R10/03/2023Introdução e Estrutura do CursoRevisão de R: Importando dados17/03/2023Revisão de R: principais funções e operaçõesRevisão de R: outras funções24/03/2023Revisão de R: gráficosRevisão de R: mais gráficos📈PARTE II: Metodologias Estatísticas31/03/2023Revisão de Estatística: principais distribuiçõesRevisão de Estatística: inferência07/04/2023Feriado (não teremos aula)14/04/2023Revisão de Estatística: inferência - parte IIRevisão de Estatística: aprendizagem estatística21/04/2023Feriado (não teremos aula)28/04/2023Revisão de Estatística: aprendizagem estatística - parte II🔒PARTE III: Seguros de Vida05/05/2023Seguros: matemática financeiraSeguros: tabelas de vida12/05/2023Seguros: matemática atuarialSeguros: reservas19/05/2023Seguros: mais cálculos💵PARTE IV: Aplicações em Finanças e Ramo Não-Vida26/05/2023Finanças: alocação de portfólios02/06/2023Ramo Não-Vida: modelos para tarifação09/06/2023Feriado (não teremos aula)16/06/2023Ramo Não-Vida: métodos determinísticos para cálculo de reservasRamo Não-Vida: métodos estocásticos para cálculo de reservas23/06/2023Finalização do Trabalho30/06/2023Apresentação Trabalho Final</description>
+    </item>
+    
+    <item>
+      <title>Ferramentas</title>
+      <link>/ferramentas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ferramentas/</guid>
+      <description>&lt;!DOCTYPE html&gt;RRStudioR é a linguagem de programação que usaremos nesta disciplina. Vamos utilizar a linguagem R com a interface do programa RStudio. Primeiro, você deve baixar e instalar a versão do R mais recente para o seu sistema operacional em https://cran.rstudio.com/.RStudio é um Ambiente Integrado de Desenvolvimento, ou IDE (integrated development environment), para programação em R e outras linguagens. O programa contém um editor e um console para execução de código, além de outras ferramentas para visualização de gráficos e desenvolvimento de código.</description>
+    </item>
+    
+  </channel>
+</rss>

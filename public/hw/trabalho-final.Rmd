@@ -1,0 +1,71 @@
+---
+title: "Trabalho Final"
+date: "Apresentações: **22/07/2022** durante a aula <br/> Entrega: arquivo .Rmd até **22/07/2022** via Moodle"
+output: 
+  html_document: 
+    css: hw.css
+    theme: yeti
+    toc: true
+    toc_float: true
+    fig_caption: true
+    includes:
+       in_header: myheader.html
+---
+
+## Instruções
+
+- O trabalho poderá ser feito *individualmente* ou *em duplas*. Todos deverão preencher este [formulário](https://docs.google.com/spreadsheets/d/19nXcYSlpmNV6Yf9ghZr7gDCXnIv4633rMIhd3GjDkC0/edit?usp=sharing) até o dia 10/07/22 com os dados do seu trabalho, e escolher o horário da sua apresentação.
+
+- As apresentações terão duração de 15 minutos cada, e serão feitas durante a aula do dia **22 de julho**.
+
+- Os slides deverão ser feitos com o `rmarkdown`. 
+
+  - Para isso, você deve salvar o template [apresentacao_trabalho.Rmd](apresentacao_trabalho.Rmd) no seu computador e compilar usando o botão **Knit**. O resultado deverá ser igual aos slides em [apresentacao_trabalho.html](apresentacao_trabalho.html).
+  
+  - Depois, é só editar o template para incluir as suas informações (*Obs.: só edite o arquivo após ter certeza que ele compilou corretamente*).
+  
+- Cada aluno deverá submeter **apenas o arquivo .Rmd** no Moodle até o dia 22/07/2022.
+
+
+## Conteúdo
+
+- Cada dupla deve escolher um banco de dados do livro "*Computational Actuarial Science with R*" no pacote `CASdatasets`. Para uma lista dos dados, veja `?CASdatasets`.
+
+- A primeira parte da apresentação deve incluir uma descrição dos dados e a **Análise Descritiva** das variáveis. Lembre-se de analisar as distribuições marginais, conjuntas e condicionais que fizerem sentido para os seus dados.
+
+- A segunda parte da apresentação deve ser sobre a **Inferência e Ajuste** de algum modelo estatístico coerente para a sua base de dados. Os modelos podem ser relacionados a qualquer um dos tópicos vistos durante o semestre, ou outro modelo que vocês já tenham aprendido. Essa parte deve incluir as suposições do modelo, os passos para fazer o ajuste, e a apresentação dos resultados.
+
+
+## Avaliação
+
+- A participação de cada aluno durante as demais apresentações será levada em conta na sua nota final.
+
+- Os pesos para cada parte do trabalho serão:
+
+<div style="width: 200px; margin:0 auto;" >
+|                           | Peso    |
+|---------------------------|---------|
+|Apresentação (individual)  |  5 pts  |
+|Análise Descritiva         | 15 pts  |
+|Ajuste do Modelo           | 15 pts  |
+|Participação               |  5 pts  |
+</div>
+
+
+<!-- ## Trabalhos -->
+
+<!-- <div style="width: 400px; margin:0 auto;" > -->
+
+<!-- | Dupla                               | Arquivo .Rmd    | Slides    | -->
+<!-- |-------------------------------------|:---------------:|:---------:| -->
+<!-- |1) Leonardo Borba e Luanvir          | <a href="trabalhos/1-LeonardoB_Luanvir.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/1-LeonardoB_Luanvir.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |2) Leonardo Silva e Mateus           | <a href="trabalhos/2-LeonardoS_Mateus.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/2-LeonardoS_Mateus.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |3) Fernanda e Verônica               | <a href="trabalhos/3-Fernanda_Veronica.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/3-Fernanda_Veronica.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |4) Ygor Viana e Tomaz                | <a href="trabalhos/4-Ygor_Tomaz.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/4-Ygor_Tomaz.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |5) Bruno e Luís Henrique             | <a href="trabalhos/5-Bruno_Luis.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/5-Bruno_Luis.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |6) Guilherme Maciel e Igor Mazzeto   | <a href="trabalhos/6-Guilherme_Igor.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/6-Guilherme_Igor.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |7) Beatriz e Iara                    | <a href="trabalhos/7-Beatriz_Iara.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/7-Beatriz_Iara.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |8) Taís e Sérgio                     | <a href="trabalhos/8-Tais_Sergio.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/8-Tais_Sergio.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+<!-- |9) Luísa e Letícia                   | <a href="trabalhos/9-Luisa_Leticia.Rmd"><i class="fa fa-keyboard-o fa-lg"></i></a> | <a href="trabalhos/9-Luisa_Leticia.html"><i class="fa fa-file-image-o fa-lg"></i></a> | -->
+
+<!-- </div> -->

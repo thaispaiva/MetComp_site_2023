@@ -2,7 +2,7 @@ baseurl = "/"
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
 
-title = "Métodos Computacionais para Análise de Risco 2022/1"
+title = "Métodos Computacionais para Análise de Risco 2023/1"
 theme = "material"
 
 # disqusShortname = ""
@@ -70,7 +70,7 @@ enableEmoji = true
   identifier = "GitHub"
   name = "GitHub"
   pre = "<i class=\"button-icon fa fa-2x fa-github\"></i>"
-  url = "https://github.com/thaispaiva/MetComp_site_2022"
+  url = "https://github.com/thaispaiva/MetComp_site_2023"
 
 
 [params]
