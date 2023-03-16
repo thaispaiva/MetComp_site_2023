@@ -1,6 +1,6 @@
 ---
 title: "Lista de Exercícios 1"
-date: "Entrega: 16/04/2022 via Moodle (até as 23:59)"
+date: "Entrega: 26/03/2023 via Moodle (até as 23:59)"
 output: 
   html_document: 
     css: hw.css
@@ -84,10 +84,10 @@ knitr::include_graphics("img/header2.png")
 4) Faça um gráfico de dispersão da velocidade do vento por ano. Há alguma tendência de mudança da velocidade do vento ao longo do século XX?
 
 
-## Resolução
+<!-- ## Resolução -->
 
-Sugestão de respostas: 
+<!-- Sugestão de respostas:  -->
 
-- [Resolução Lista 1](./resolucao/lista-01-resolucao.html)
+<!-- - [Resolução Lista 1](./resolucao/lista-01-resolucao.html) -->
 
-- [Arquivo .Rmd](./resolucao/lista-01-resolucao.Rmd)
+<!-- - [Arquivo .Rmd](./resolucao/lista-01-resolucao.Rmd) -->
