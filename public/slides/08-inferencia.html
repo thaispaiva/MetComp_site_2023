@@ -194,7 +194,7 @@ slide:not(.current) .plotly.html-widget{
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">13 de maio de 2022</p>
+            <p style="margin-top: 6px; margin-left: -2px;">31 de março de 2023</p>
           </hgroup>
   </slide>
 
@@ -468,7 +468,7 @@ cbind(SINGLE= c(NA, fgam$estimate, fpar$estimate), MIXTURE=fmixgampar$estimate)<
 ## scale 13.8424418 29.9966023</pre>
 
 </article></slide><slide class=""><hgroup><h2><span class="green3">
-<strong>Exemplo - Dados de incêndio</strong></span></h2></hgroup><article  class="smaller" id="exemplo---dados-de-incêndio-3">
+<strong>Exemplo - Dados de incêndio</strong></span></h2></hgroup><article  id="exemplo---dados-de-incêndio-3" class="smaller">
 
 <pre class = 'prettyprint lang-r'>## Gráfico das funções de distribuição ajustadas
 cdfcomp(list(fgam, fpar, fmixgampar), xlogscale=TRUE, datacol=&quot;grey&quot;, fitlwd=2,
@@ -565,7 +565,7 @@ qpoisZM &lt;- function(p, prob, lambda)
                   lower=c(0,0), upper=c(1, Inf))  # poisson modificada</pre>
 
 </article></slide><slide class=""><hgroup><h2><span class="green3">
-<strong>Exemplo - Testes de Adequação de Ajuste</strong></span></h2></hgroup><article  class="smaller" id="exemplo---testes-de-adequação-de-ajuste-2">
+<strong>Exemplo - Testes de Adequação de Ajuste</strong></span></h2></hgroup><article  id="exemplo---testes-de-adequação-de-ajuste-2" class="smaller">
 
 <pre class = 'prettyprint lang-r'>gofstat(list(fpois, fnbinom, fpoisZM), chisqbreaks=c(0:4, 9),
         discrete=TRUE, fitnames=c(&quot;Poisson&quot;,&quot;NegBinomial&quot;,&quot;ZM-Poisson&quot;))</pre>

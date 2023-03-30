@@ -2,7 +2,7 @@
 title: "Métodos Computacionais para Análise de Risco"
 author: 'Prof.: Thais Paiva'
 
-date: "13 de maio de 2022"
+date: "31 de março de 2023"
 subtitle: "08 - Inferência"
 
 output:
@@ -24,7 +24,7 @@ library(knitr)
 ```
 
 ```{r echo=FALSE}
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 08 - Inferência
 
 ```
