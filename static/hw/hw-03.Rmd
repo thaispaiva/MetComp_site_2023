@@ -66,10 +66,12 @@ mpg
 8) Refaça o gráfico do exercício anterior, mas separe em diferentes painéis os pontos de cada tipo de tração usando o comando `facet_grid()`. Você acha que essa visualização facilita a comparação dos diferentes grupos de carros?
 
 
-<!-- ## Resolução -->
+## Resolução
 
-<!-- Sugestão de respostas: -->
+Sugestão de respostas:
 
-<!-- - [Resolução Lista 3](./resolucao/lista-03-resolucao.html) -->
+- [Resolução Lista 3](./resolucao/lista-03-resolucao.html)
 
-<!-- - [Arquivo .Rmd](./resolucao/lista-03-resolucao.Rmd) -->
+- [Arquivo .Rmd](./resolucao/lista-03-resolucao.Rmd)
+
+- [Resolução em pdf](./resolucao/lista-03-resolucao.pdf)
