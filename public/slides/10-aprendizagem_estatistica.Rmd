@@ -2,7 +2,7 @@
 title: "Métodos Computacionais para Análise de Risco"
 author: 'Prof.: Thais Paiva'
 
-date: "20 de maio de 2022"
+date: "14 de abril de 2023"
 subtitle: "10 - Aprendizagem Estatística"
 
 output:
@@ -24,7 +24,7 @@ library(knitr)
 ```
 
 ```{r echo=FALSE}
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 10 - Aprendizagem Estatística
 
 ```
