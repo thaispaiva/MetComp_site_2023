@@ -2,7 +2,7 @@
 title: "Métodos Computacionais para Análise de Risco"
 author: 'Prof.: Thais Paiva'
 
-date: "03 de junho de 2022"
+date: "05 de maio de 2023"
 subtitle: "13 - Tabelas de Vida"
 
 output:
@@ -26,7 +26,7 @@ library(knitr)
 ```
 
 ```{r echo=FALSE}
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 13 - Tabelas de Vida
 
 ```
@@ -115,7 +115,7 @@ $${}_{t}q_x = 1 - {}_{t}p_x = P(T(x) \leq t) = \frac{l_x - l_{x+t}}{l_x} $$
 
 1. imputar diretamente $x$ e $l_x$:
 
-```{r echo=FALSE, message=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 require(lifecontingencies)
 
 ## Exercício 1
@@ -423,9 +423,9 @@ Sabemos que ${}_{h}p_x = \exp\left( - \int_0^h \mu_{x+s} \,ds\right)$, onde $\mu
 ```
 
 ```{r}
-pxt(object=soa08, x=80.25, t=0.5, fractional="linear")
+qxt(object=soa08, x=80.25, t=0.5, fractional="linear")
 
-pxt(object=soa08, x=80.25, t=0.5, fractional="constant force")
+qxt(object=soa08, x=80.25, t=0.5, fractional="constant force")
 
 ```
 

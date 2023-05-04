@@ -42,7 +42,7 @@
     };
   </script>
 
-  <script src="libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="libs/header-attrs-2.20/header-attrs.js"></script>
   <link href="libs/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
   <link href="libs/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
   <link href="libs/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
@@ -136,7 +136,7 @@ slide:not(.current) .plotly.html-widget{
             code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
             code span.at { color: #7d9029; } /* Attribute */
             code span.bn { color: #40a070; } /* BaseN */
-            code span.bu { } /* BuiltIn */
+            code span.bu { color: #008000; } /* BuiltIn */
             code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
             code span.ch { color: #4070a0; } /* Char */
             code span.cn { color: #880000; } /* Constant */
@@ -149,7 +149,7 @@ slide:not(.current) .plotly.html-widget{
             code span.ex { } /* Extension */
             code span.fl { color: #40a070; } /* Float */
             code span.fu { color: #06287e; } /* Function */
-            code span.im { } /* Import */
+            code span.im { color: #008000; font-weight: bold; } /* Import */
             code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
             code span.kw { color: #007020; font-weight: bold; } /* Keyword */
             code span.op { color: #666666; } /* Operator */
@@ -194,7 +194,7 @@ slide:not(.current) .plotly.html-widget{
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">27 de maio de 2022</p>
+            <p style="margin-top: 6px; margin-left: -2px;">05 de maio de 2023</p>
           </hgroup>
   </slide>
 
@@ -414,13 +414,13 @@ anuidades antecipadas</span> (&ldquo;<em>annuity-due</em>&rdquo;).</p></li>
 <li>Anuidade certa postecipada por \(n\) anos:</li>
 </ul>
 
-<p><img src="img/anuidade.PNG" height="5%" style="display: block; margin: auto;" /></p>
+<p><img src="img/anuidade.png" width="268" height="5%" style="display: block; margin: auto;" /></p>
 
 <ul>
 <li>Anuidade certa antecipada por \(n\) anos:</li>
 </ul>
 
-<p><img src="img/anuidade2.png" style="display: block; margin: auto;" /></p>
+<p><img src="img/anuidade2.png" width="352" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Perpetuidades</h2></hgroup><article  id="perpetuidades">
 
@@ -428,9 +428,9 @@ anuidades antecipadas</span> (&ldquo;<em>annuity-due</em>&rdquo;).</p></li>
 <li>Perpetuidades (anuidade infinita) antecipada e postecipada:</li>
 </ul>
 
-<p><img src="img/anuidade4.png" style="display: block; margin: auto;" /></p>
+<p><img src="img/anuidade4.png" width="190" style="display: block; margin: auto;" /></p>
 
-<p><img src="img/anuidade3.png" style="display: block; margin: auto;" /></p>
+<p><img src="img/anuidade3.png" width="194" style="display: block; margin: auto;" /></p>
 
 <p>Podemos calcular com a função <code>annuity</code>.</p>
 
@@ -488,7 +488,7 @@ n = 5
 <strong>valor acumulado</strong></span> ou valor futuro de uma série de pagamentos.</li>
 </ul>
 
-<p><img src="img/valor_futuro.png" style="display: block; margin: auto;" /></p>
+<p><img src="img/valor_futuro.png" width="302" style="display: block; margin: auto;" /></p>
 
 <p>Podemos calcular com a função <code>accumulatedValue</code>.</p>
 
@@ -524,8 +524,8 @@ R</pre>
 <li><p>Também podemos querer encontrar o <strong>valor presente</strong> ou <strong>valor acumulado</strong> de uma série de pagamentos <em>não constantes</em>.</p></li>
 <li><p>Todos os casos podem ser avaliados com a fórmula do VP que vimos no começo da aula.</p></li>
 <li><p>Mas vamos encontrar expressões para alguns casos específicos, como <span class="black">
-<strong>anuidades aritmeticamente crescentes</strong></span> \((IA)_n\) e <span class="black">
-<strong>anuidades aritmeticamente decrescentes</strong></span> \((DA)_n\).</p></li>
+<strong>anuidades aritmeticamente crescentes</strong></span> \((I\ddot{a})_n\) e <span class="black">
+<strong>anuidades aritmeticamente decrescentes</strong></span> \((D\ddot{a})_n\).</p></li>
 <li><p>No R: <code>increasingAnnuity</code> e <code>decreasingAnnuity</code>.</p></li>
 </ul>
 

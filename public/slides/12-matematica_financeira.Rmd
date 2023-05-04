@@ -2,7 +2,7 @@
 title: "Métodos Computacionais para Análise de Risco"
 author: 'Prof.: Thais Paiva'
 
-date: "27 de maio de 2022"
+date: "05 de maio de 2023"
 subtitle: "12 - Revisão de Matemática Financeira"
 
 output:
@@ -26,7 +26,7 @@ library(knitr)
 ```
 
 ```{r echo=FALSE}
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 12 - Revisão de Matemática Financeira
 
 ```
@@ -334,7 +334,7 @@ n = 5
 
 - Também podemos definir o <span class="black">**valor acumulado**</span> ou valor futuro de uma série de pagamentos.
 
-```{r fig.align='center', fig.height=0.5, echo=FALSE, purl=FALSE}
+```{r fig.align='center', fig.height=0.7, echo=FALSE, purl=FALSE}
 include_graphics("img/valor_futuro.png") 
 ```
 
@@ -382,7 +382,7 @@ R
 
 - Todos os casos podem ser avaliados com a fórmula do VP que vimos no começo da aula.
 
-- Mas vamos encontrar expressões para alguns casos específicos, como <span class="black">**anuidades aritmeticamente crescentes**</span> $(IA)_n$ e <span class="black">**anuidades aritmeticamente decrescentes**</span> $(DA)_n$.
+- Mas vamos encontrar expressões para alguns casos específicos, como <span class="black">**anuidades aritmeticamente crescentes**</span> $(I\ddot{a})_n$ e <span class="black">**anuidades aritmeticamente decrescentes**</span> $(D\ddot{a})_n$.
 
 - No R: `increasingAnnuity` e `decreasingAnnuity`.
 

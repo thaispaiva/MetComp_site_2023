@@ -1,4 +1,4 @@
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 13 - Tabelas de Vida
 
 
@@ -112,9 +112,9 @@ exn(soa08,80,10,"complete")
 ## probabilidades para idades fracionárias
 
 
-pxt(object=soa08, x=80.25, t=0.5, fractional="linear")
+qxt(object=soa08, x=80.25, t=0.5, fractional="linear")
 
-pxt(object=soa08, x=80.25, t=0.5, fractional="constant force")
+qxt(object=soa08, x=80.25, t=0.5, fractional="constant force")
 
 
 
