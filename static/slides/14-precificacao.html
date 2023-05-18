@@ -194,7 +194,7 @@ slide:not(.current) .plotly.html-widget{
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">10 de junho de 2022</p>
+            <p style="margin-top: 6px; margin-left: -2px;">19 de maio de 2023</p>
           </hgroup>
   </slide>
 
@@ -283,7 +283,7 @@ seguro de vida temporário</span> por \(n\) anos, que paga $1 no final do ano de
 <li><p>VPA:</p></li>
 </ul>
 
-<p><img src="img/Axn.png" width="815" style="display: block; margin: auto;" /></p>
+<p><img src="img/Axn.png" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Seguros de Vida</h2></hgroup><article  id="seguros-de-vida-2">
 
@@ -314,13 +314,13 @@ seguro diferido</span>, basta alterar os limites do somatório para \(k=m\) até
 <li>VPA de Seguro de vida inteira:</li>
 </ul>
 
-<p><img src="img/Ax.png" width="162" style="display: block; margin: auto;" /></p>
+<p><img src="img/Ax.png" style="display: block; margin: auto;" /></p>
 
 <ul>
 <li>Seguro Dotal Puro:</li>
 </ul>
 
-<p><img src="img/nEx.png" width="211" style="display: block; margin: auto;" /></p>
+<p><img src="img/nEx.png" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Funções de Comutação - Seguros</h2></hgroup><article  id="funções-de-comutação---seguros-1">
 
@@ -328,13 +328,13 @@ seguro diferido</span>, basta alterar os limites do somatório para \(k=m\) até
 <li>VPA de Seguro de vida diferido:</li>
 </ul>
 
-<p><img src="img/nAx.png" width="464" style="display: block; margin: auto;" /></p>
+<p><img src="img/nAx.png" style="display: block; margin: auto;" /></p>
 
 <ul>
 <li>VPA de Seguro de vida temporário:</li>
 </ul>
 
-<p><img src="img/seg_temp.png" width="303" style="display: block; margin: auto;" /></p>
+<p><img src="img/seg_temp.png" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Tabela Atuarial</h2></hgroup><article  id="tabela-atuarial">
 
@@ -387,7 +387,7 @@ head(soaAct.df)</pre>
 <li><p>VPA desse seguro:</p></li>
 </ul>
 
-<p><img src="img/vpa.png" width="606" style="display: block; margin: auto;" /></p>
+<p><img src="img/vpa.png" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2><span class="green3">
 <strong>Exercício</strong></span></h2></hgroup><article  id="exercício-4">
@@ -420,7 +420,7 @@ p1 = 100000*sum(disc*prob.morte)</pre>
 <li>Usando funções de comutação:</li>
 </ul>
 
-<p><img src="img/vpa2.png" width="330" style="display: block; margin: auto;" /></p>
+<p><img src="img/vpa2.png" style="display: block; margin: auto;" /></p>
 
 <pre class = 'prettyprint lang-r'>## 2) usando funções de comutação
 p2 = 100000*with(soaAct.df, (Mx[37]-Mx[40])/Dx[37])</pre>
@@ -443,7 +443,7 @@ p3 = 100000*Axn(actuarialtable = soaAct, x=36, n=3)</pre>
 <li><p>Por exemplo, considere um seguro temporário por \(n\) anos que paga \(k+1\) se \(x\) completou \(k\) anos desde o início do contrato, ou seja, se \(K_x = k\) para \(k=0,1,\dots,n-1\).</p></li>
 </ul>
 
-<p><img src="img/IAx.PNG" width="450" style="display: block; margin: auto;" /></p>
+<p><img src="img/IAx.PNG" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Seguros com benefícios crescentes</h2></hgroup><article  id="seguros-com-benefícios-crescentes-1">
 
@@ -451,7 +451,7 @@ p3 = 100000*Axn(actuarialtable = soaAct, x=36, n=3)</pre>
 <li>Seguros <em>temporários</em>, <em>crescentes</em> e <em>decrescentes</em> estão relacionados através da equação:</li>
 </ul>
 
-<p><img src="img/seg_cresc.png" width="506" style="display: block; margin: auto;" /></p>
+<p><img src="img/seg_cresc.png" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Seguros com benefícios crescentes</h2></hgroup><article  id="seguros-com-benefícios-crescentes-2">
 
@@ -471,7 +471,7 @@ p3 = 100000*Axn(actuarialtable = soaAct, x=36, n=3)</pre>
 <li>Também podemos considerar seguros <em>pagos em m partes no ano</em>. Assim, estamos dividindo o ano em \(m\) subperíodos, e os benefícios serão pagos no final da parte em que ocorrer a morte.</li>
 </ul>
 
-<p><img src="img/Ax_mpartes.PNG" width="340" style="display: block; margin: auto;" /></p>
+<p><img src="img/Ax_mpartes.PNG" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Seguros em m partes no ano</h2></hgroup><article  id="seguros-em-m-partes-no-ano-1">
 
@@ -479,7 +479,7 @@ p3 = 100000*Axn(actuarialtable = soaAct, x=36, n=3)</pre>
 <li>Vamos verificar <strong>numericamente</strong> que</li>
 </ul>
 
-<p><img src="img/Axn_Axn_mpartes.png" width="298" style="display: block; margin: auto;" /></p>
+<p><img src="img/Axn_Axn_mpartes.png" style="display: block; margin: auto;" /></p>
 
 <p>(sob suposição de distribuição uniforme de mortes - Seção 4.5 do Dickson)</p>
 
@@ -519,13 +519,13 @@ anuidade de vida inteira <em>postecipada</em></span>:</li>
 <li>VPA de Anuidade de vida inteira <em>antecipada</em>:</li>
 </ul>
 
-<p><img src="img/anndue.PNG" width="153" style="display: block; margin: auto;" /></p>
+<p><img src="img/anndue.PNG" style="display: block; margin: auto;" /></p>
 
 <ul>
 <li>VPA de Anuidade de vida inteira <em>postecipada</em>:</li>
 </ul>
 
-<p><img src="img/annimmed.PNG" width="196" style="display: block; margin: auto;" /></p>
+<p><img src="img/annimmed.PNG" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2>Funções de Comutação - Anuidades</h2></hgroup><article  id="funções-de-comutação---anuidades-1">
 
@@ -533,13 +533,13 @@ anuidade de vida inteira <em>postecipada</em></span>:</li>
 <li>VPA de Anuidade de vida inteira <em>antecipada</em> e <em>diferida</em>:</li>
 </ul>
 
-<p><img src="img/anndue_diferida.PNG" width="445" style="display: block; margin: auto;" /></p>
+<p><img src="img/anndue_diferida.PNG" style="display: block; margin: auto;" /></p>
 
 <ul>
 <li>VPA de Anuidade de vida <em>antecipada</em> e <em>temporária</em>:</li>
 </ul>
 
-<p><img src="img/anndue_temporaria.PNG" width="472" style="display: block; margin: auto;" /></p>
+<p><img src="img/anndue_temporaria.PNG" style="display: block; margin: auto;" /></p>
 
 </article></slide><slide class=""><hgroup><h2><span class="green3">
 <strong>Exercício</strong></span></h2></hgroup><article  id="exercício-8" class="build">

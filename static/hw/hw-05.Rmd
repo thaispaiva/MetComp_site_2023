@@ -1,6 +1,6 @@
 ---
 title: "Lista de Exercícios 5"
-date: "Entrega: **23/06/2022** via Moodle (até as 23:59)"
+date: "Entrega: **28/05/2023** via Moodle (até as 23:59)"
 output: 
   html_document: 
     css: hw.css
@@ -63,13 +63,13 @@ Para os exercícios a seguir, utilize a mesma tabela de vida da seção anterior
 
 
 
-## Resolução
+<!-- ## Resolução -->
 
-Sugestão de respostas:
+<!-- Sugestão de respostas: -->
 
-- [Resolução Lista 5](./resolucao/lista-05-resolucao.html)
+<!-- - [Resolução Lista 5](./resolucao/lista-05-resolucao.html) -->
 
-- [Arquivo .Rmd](./resolucao/lista-05-resolucao.Rmd)
+<!-- - [Arquivo .Rmd](./resolucao/lista-05-resolucao.Rmd) -->
 
-- [Resolução em pdf](./resolucao/lista-05-resolucao.pdf)
+<!-- - [Resolução em pdf](./resolucao/lista-05-resolucao.pdf) -->
 
