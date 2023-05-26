@@ -1,6 +1,6 @@
 ---
 title: "Lista de Exercícios 6"
-date: "Entrega: **14/07/2022** via Moodle (até as 23:59)"
+date: "Entrega: **04/06/2023** via Moodle (até as 23:59)"
 output: 
   html_document: 
     css: hw.css
@@ -63,16 +63,16 @@ Você irá entregar essa lista de exercício no Moodle da disciplina. Você deve
 8) Um segurado de 65 anos quer contratar uma anuidade antecipada, anual e vitalícia de \$1.000. Encontre o menor prêmio único que a seguradora pode cobrar para garantir que a probabilidade de perda positiva não seja maior do que 25\%.
 
 
-## Resolução
+<!-- ## Resolução -->
 
-Sugestão de respostas:
+<!-- Sugestão de respostas: -->
 
-- [Resolução Lista 6](./resolucao/lista-06-resolucao.html)
+<!-- - [Resolução Lista 6](./resolucao/lista-06-resolucao.html) -->
 
-- [Arquivo .Rmd](./resolucao/lista-06-resolucao.Rmd)
+<!-- - [Arquivo .Rmd](./resolucao/lista-06-resolucao.Rmd) -->
 
-- [Resolução em pdf](./resolucao/lista-06-resolucao.pdf)
+<!-- - [Resolução em pdf](./resolucao/lista-06-resolucao.pdf) -->
 
-<!-- Sugestão de respostas: [Resolução Lista 6](./resolucao/lista-06-resolucao.html) -->
+
 
 

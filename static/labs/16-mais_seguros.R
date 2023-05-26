@@ -1,4 +1,4 @@
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 16 - Mais cálculos de Seguros
 
 
@@ -106,7 +106,7 @@ t.test(x=K0, mu=exn(soa08Act))
 ## Exemplo - simulação de valores presente de seguro
 
 ## 1) gerar amostra de tempos de vida ao nascer
-set.seed(2022)
+set.seed(2023)
 ##
 
 ## 2) calcular valor presente da indenização
