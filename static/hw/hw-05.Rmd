@@ -63,13 +63,13 @@ Para os exercícios a seguir, utilize a mesma tabela de vida da seção anterior
 
 
 
-<!-- ## Resolução -->
+## Resolução
 
-<!-- Sugestão de respostas: -->
+Sugestão de respostas:
 
-<!-- - [Resolução Lista 5](./resolucao/lista-05-resolucao.html) -->
+- [Resolução Lista 5](./resolucao/lista-05-resolucao.html)
 
-<!-- - [Arquivo .Rmd](./resolucao/lista-05-resolucao.Rmd) -->
+- [Arquivo .Rmd](./resolucao/lista-05-resolucao.Rmd)
 
-<!-- - [Resolução em pdf](./resolucao/lista-05-resolucao.pdf) -->
+- [Resolução em pdf](./resolucao/lista-05-resolucao.pdf)
 

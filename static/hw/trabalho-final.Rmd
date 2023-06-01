@@ -1,6 +1,7 @@
+
 ---
 title: "Trabalho Final"
-date: "Apresentações: **22/07/2022** durante a aula <br/> Entrega: arquivo .Rmd até **22/07/2022** via Moodle"
+date: "Apresentações: **30/06/2023** durante a aula <br/> Entrega: arquivo .Rmd até **30/06/2023** via Moodle"
 output: 
   html_document: 
     css: hw.css
@@ -14,9 +15,9 @@ output:
 
 ## Instruções
 
-- O trabalho poderá ser feito *individualmente* ou *em duplas*. Todos deverão preencher este [formulário](https://docs.google.com/spreadsheets/d/19nXcYSlpmNV6Yf9ghZr7gDCXnIv4633rMIhd3GjDkC0/edit?usp=sharing) até o dia 10/07/22 com os dados do seu trabalho, e escolher o horário da sua apresentação.
+- O trabalho poderá ser feito *individualmente* ou *em duplas*. Todos deverão preencher este [formulário](https://docs.google.com/spreadsheets/d/1MH0Grt-ITDRcmMsw6I2zAWWRQPoyfhmtegm1pHWXe4s/edit?usp=sharing) até o dia 15/06/23 com os dados do seu trabalho, e escolher o horário da sua apresentação.
 
-- As apresentações terão duração de 15 minutos cada, e serão feitas durante a aula do dia **22 de julho**.
+- As apresentações terão duração de 15 minutos cada, e serão feitas durante a aula do dia **30 de junho**.
 
 - Os slides deverão ser feitos com o `rmarkdown`. 
 
@@ -24,7 +25,7 @@ output:
   
   - Depois, é só editar o template para incluir as suas informações (*Obs.: só edite o arquivo após ter certeza que ele compilou corretamente*).
   
-- Cada aluno deverá submeter **apenas o arquivo .Rmd** no Moodle até o dia 22/07/2022.
+- Cada aluno deverá submeter **apenas o arquivo .Rmd** no Moodle até o dia 30/06/2023.
 
 
 ## Conteúdo

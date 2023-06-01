@@ -1,4 +1,4 @@
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 18 - Alocação de Portfólios
 
 
