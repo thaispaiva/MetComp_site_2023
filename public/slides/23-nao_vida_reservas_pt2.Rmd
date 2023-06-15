@@ -2,7 +2,7 @@
 title: "Métodos Computacionais para Análise de Risco"
 author: 'Prof.: Thais Paiva'
 
-date: "18 de março de 2021"
+date: "16 de junho de 2023"
 subtitle: "23 - Ramo Não-Vida: reservas (parte 2)"
 
 output:
@@ -24,7 +24,7 @@ library(knitr)
 ```
 
 ```{r echo=FALSE}
-## EST171 - Métodos Computacionais para Análise de Risco
+## EST053 - Métodos Computacionais para Análise de Risco
 ## Código da aula 23 - Ramo Não-Vida (reservas) - parte 2
 
 ```
